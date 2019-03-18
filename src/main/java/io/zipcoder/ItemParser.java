@@ -16,43 +16,6 @@ public class ItemParser {
     private String expirPattern = "(Expiration)[:@*^%!](\\d/.*)";
     private int exceptionCount = 0;
 
-
-//    public List<Item> parseItemList(String valueToParse) {
-//        List<Item> itemList = new ArrayList<>();
-//        String[] array = valueToParse.toLowerCase().split("##");
-//        for(String str : array){
-//            try {
-//                itemList.add(parseSingleItem(str));
-//            } catch (ItemParseException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        return itemList;
-//    }
-//
-//    public Item parseSingleItem(String singleItem) throws ItemParseException {
-//        List<String> stringList = new ArrayList<>();
-//        Pattern pattern = Pattern.compile("");
-//        String[] array = singleItem.toLowerCase().split(";");
-//
-//        System.out.println(Arrays.toString(array));
-//        try {
-//            for (String str : array) {
-//                String temp = str.replaceAll("[@*^%!]", ":");
-//                //System.out.println(removeFirst);
-//                stringList.add(str.split("[:@^*%#]")[1]);
-//
-//            }
-//        }catch (ArrayIndexOutOfBoundsException exception){
-//            throw new ItemParseException();
-//        }
-//        System.out.println(stringList);
-//            Item item = new Item(stringList.get(0), Double.valueOf(stringList.get(1)), stringList.get(2), stringList.get(3));
-//
-//        return item;
-//    }
-
-
     public Item parseSingleItem(String singleItem) throws ItemParseException {
         String newStr = singleItem.split("##")[0];
         String name, price, type, date;
