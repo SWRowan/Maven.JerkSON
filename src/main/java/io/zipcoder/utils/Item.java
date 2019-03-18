@@ -32,8 +32,8 @@ public class Item {
     }
 
 
-    public Double getPrice() {
-        return price;
+    public String getPrice() {
+        return String.valueOf(price);
     }
 
 
